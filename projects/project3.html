@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 - Animated Portfolio Website</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding: 120px 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .project-detail.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .project-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        .project-description {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .project-description.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .project-info {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .project-info.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .project-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .project-info ul {
+            list-style: none;
+        }
+        
+        .project-info li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-gallery {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .gallery-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #3ec554;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #2c3e50;
+        }
+        
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="project-detail">
+        <div class="project-header">
+            <h1>Animated Portfolio Website</h1>
+            <p>A showcase of modern web animations and transitions</p>
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This portfolio website demonstrates advanced web animation techniques and smooth transitions. The project focuses on creating an engaging user experience through carefully crafted animations and interactive elements.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Smooth scroll animations and transitions</li>
+                    <li>Interactive UI elements with hover effects</li>
+                    <li>Parallax scrolling effects</li>
+                    <li>Responsive design with animated components</li>
+                    <li>Performance-optimized animations</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The website was built using modern CSS animations and JavaScript libraries for smooth performance. Special attention was paid to optimizing animations for different devices and ensuring a consistent experience across browsers.</p>
+
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400" alt="Animation Showcase">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400" alt="Transition Effects">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://via.placeholder.com/600x400" alt="Interactive Elements">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <h3>Project Details</h3>
+                <ul>
+                    <li><strong>Duration:</strong> 2 months</li>
+                    <li><strong>Role:</strong> Front-end Developer</li>
+                    <li><strong>Technologies:</strong> HTML5, CSS3, JavaScript, GSAP</li>
+                    <li><strong>Tools Used:</strong> VS Code, Git, Adobe After Effects</li>
+                </ul>
+
+                <h3>Challenges & Solutions</h3>
+                <p>The main challenge was balancing visual appeal with performance. This was solved by implementing efficient animation techniques and optimizing asset loading for smooth performance across all devices.</p>
+
+                <a href="../index.html#projects" class="back-button">Back to Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Handle staggered animations for gallery items
+                        if (entry.target.classList.contains('project-gallery')) {
+                            const items = entry.target.querySelectorAll('.gallery-item');
+                            items.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('visible');
+                                }, index * 200);
+                            });
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            });
+
+            // Observe main elements
+            const elements = document.querySelectorAll('.project-detail, .project-header, .project-description, .project-info, .project-gallery');
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html> 

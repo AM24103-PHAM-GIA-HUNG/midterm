@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Responsive Website Design</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding: 120px 2rem 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .project-detail.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            background-color: white;
+        }
+
+        .project-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .project-header h1 {
+            color: #2c3e50;
+            padding: 20px;
+        }
+        .project-header p{
+            padding-bottom: 20px;
+        }
+        .project-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        
+        .project-description {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .project-description h3{
+            margin: 10px 0px 10px;
+        }
+        .project-description ul{
+            margin-left: 15px;
+        }
+        .project-description.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .project-info {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateX(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .project-info.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .project-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .project-info ul {
+            list-style: none;
+        }
+        
+        .project-info li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-gallery {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .gallery-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #3ec554;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #2c3e50;
+        }
+        
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="project-detail">
+        <div class="project-header">
+            <h1>HRV Monitoring for Enhancing Meditation Experiences</h1>
+            <p>A research topic of meditation guiding robot project</p>
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This research project focuses on developing an innovative meditation guidance system that utilizes Heart Rate Variability (HRV) monitoring to enhance meditation experiences. The system combines physiological feedback with robotic guidance to create a more effective and personalized meditation practice.</p>
+                
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Real-time HRV monitoring and analysis</li>
+                    <li>Adaptive meditation guidance based on physiological responses</li>
+                    <li>Integration with robotic interface for physical guidance</li>
+                    <li>Data visualization and progress tracking</li>
+                    <li>Personalized meditation recommendations</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The project was developed using Python for data processing and analysis, with Arduino and Jetson Nano for hardware integration. The system employs advanced signal processing techniques to analyze HRV patterns and machine learning algorithms to provide personalized meditation guidance. The implementation includes real-time data acquisition, processing, and visualization components.</p>
+
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="../pictures/project1.2.png" alt="HRV Monitoring Setup">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../pictures/project1.3.png" alt="Meditation Interface">
+                    </div>
+                    <div class="gallery-item">
+                       <!--<img src="../pictures/project1.jpg" alt="Data Visualization">-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-info">
+                <h3>Project Details</h3>
+                <ul>
+                    <li><strong>Duration:</strong> 1 Semester (4 months)</li>
+                    <li><strong>Role:</strong> Researcher, programmer</li>
+                    <li><strong>Technologies:</strong> Python, Jetson Nano</li>
+                    <li><strong>Tools Used:</strong> Arduino IDE, MATLAB, VS Code</li>
+                </ul>
+
+                <h3>Challenges & Solutions</h3>
+                <p>One of the main challenges was ensuring consistent performance across different devices. This was solved by implementing a robust responsive design system and optimizing assets for different screen sizes.</p>
+
+                <a href="../index.html#projects" class="back-button">Back to Projects</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Handle staggered animations for gallery items
+                        if (entry.target.classList.contains('project-gallery')) {
+                            const items = entry.target.querySelectorAll('.gallery-item');
+                            items.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('visible');
+                                }, index * 200);
+                            });
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            });
+
+            // Observe main elements
+            const elements = document.querySelectorAll('.project-detail, .project-header, .project-description, .project-info, .project-gallery');
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+</html> 

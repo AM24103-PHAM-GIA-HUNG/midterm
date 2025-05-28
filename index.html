@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Undergraduate student, Researcher</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="profile-image">
+                <img src="pictures/profile_pic.jpg  " alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <div class="personal-info">
+                    <h3>Personal Information</h3>
+                    <ul>
+                        <li><strong>Name:</strong> Pham Gia Hung</li>
+                        <li><strong>Major:</strong> Computer Science</li>
+                        <li><strong>Research Field:</strong> Social Robotics, Human-Robot Interaction</li>
+                        <li><strong>Education:</strong> Shibaura Institute of Technology</li>
+                        <li><strong>Academic-year:</strong> Freshman</li>
+                    </ul>
+                </div>
+                <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating engaging user experiences. I specialize in front-end development and responsive design.</p>
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C, C++</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="pictures/project1.2.png" alt="Project 1">
+                <h3>HRV Monitoring for Enhancing Meditation Experiences</h3>
+                <p>A solfware that tracks user ECG, HRV data and provides feedback to improve meditation practice</p>
+                <a href="projects/project1.html" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <img src="pictures/project2.jpg" alt="Project 2">
+                <h3>Smart Hospital and Medical Services</h3>
+                <p>An smart robot that helps transporting drugs and needs for patients in the hospital.
+                        Collaborated with students of University of FLorence.
+                    </p>
+                <a href="projects/project2.html" class="project-link">View Project</a>
+            </div>
+       <!-- <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A portfolio website with smooth animations and transitions.</p>
+                <a href="projects/project3.html" class="project-link">View Project</a>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>hungpham.workonly@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+81 70 1527 2901</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Tokyo, Japan</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/AM24103-PHAM-GIA-HUNG"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 My Portfolio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
